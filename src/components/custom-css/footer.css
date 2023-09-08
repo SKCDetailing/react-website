@@ -1,0 +1,35 @@
+/* Footer Container */
+.footer-container {
+    background-color: #363636;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px; /* Adjust padding as needed */
+  }
+  
+  /* Left Text */
+  .left-text {
+    flex: 1;
+    font-size: 14px; /* Adjust font size as needed */
+  }
+  
+  /* Social Media Icons */
+  .social-icons {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Style for individual icons (Font Awesome icons used as an example) */
+  .social-icons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* Adjust spacing between icons as needed */
+    font-size: 24px; /* Adjust icon size as needed */
+  }
+  
+  /* Hover effect for icons (Font Awesome icons used as an example) */
+  .social-icons a:hover {
+    color: #8CAFFF; /* Change color on hover */
+  }
+  

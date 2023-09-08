@@ -1,0 +1,162 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #363636;
+    z-index: 3;
+  }
+  
+  .logo {
+    cursor: pointer;
+  }
+
+  .logo-text {
+    text-decoration: none;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    color: lightgrey;
+  }
+  
+  #nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    z-index: 2;
+    background-color: transparent;
+  }
+
+  .nav-link {
+    color: lightgray;
+    text-decoration:none;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  .nav-link:hover {
+    color: #8CAFFF;
+    font-weight: bolder;
+    text-decoration: underline;
+    transition: 0.3s ease;
+    /* Add the styles here */
+  }
+  
+  .book-now {
+    background-color: #8CAFFF;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .book-now-button {
+    color: whitesmoke;
+    background-color: #8CAFFF;
+    text-decoration:none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+
+  }
+
+  .book-now-button:hover {
+    background-color: #6B94D4;
+    text-decoration-style: none;
+    transition: background-color 0.3s ease;
+
+  }
+
+  #mobile {
+   display: none;
+  }
+
+  #mobile i {
+    color: white;
+    align-items: center;
+  }
+
+  #bar.fas.fa-times {
+    font-size: 30px; /* Adjust the size as needed */
+    margin-right: 20px; /* Adjust the right margin as needed */
+  }
+
+  #bar.fas.fa-bars {
+    font-size: 30px; /* Adjust the size as needed */
+    margin-right: 20px; /* Adjust the right margin as needed */
+  }
+
+  .scroll-home-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    border-radius: 20px;
+    z-index: 999;
+    transition: 0.3s;
+  }
+  
+  .scroll-home-button:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+
+  @media screen and (max-width: 760px) {
+
+    .navbar {
+      z-index: 3;
+    }
+
+    #nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      font-size: larger;
+      top: -20px;
+      right: 0px;
+      width: 300px;
+      height: 100vh;
+      background-color: #4A4A4A;
+      box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+      padding: 90px 0 0 10px; 
+      transition: 0.3s;
+  }
+
+  #nav-links.active{
+    right: -350px;
+    transition: 0.3s;
+  }
+
+  .nav-link {
+    margin-bottom: 25px;
+  }
+
+  .nav-link:hover {
+    color: #8CAFFF;
+    font-weight: bolder;
+    text-decoration: underline;
+    transition: 0.3s ease;
+  }
+
+  #mobile {
+    display: block;
+    z-index: 3;
+  }
+
+  #mobile i {
+    font-size: 24px;
+    cursor: pointer;
+
+  }
+
+  
+
+}

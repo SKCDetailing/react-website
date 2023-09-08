@@ -1,0 +1,77 @@
+/* ... (other styles) ... */
+
+.vehicle-type {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .vehicle-option {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    border: 2px dashed white;
+  }
+  
+  .vehicle-option.selected {
+    background-color: #e0e0e0;
+  }
+  
+  .vehicle-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .vehicle-title {
+    font-weight: bold;
+  }
+  
+  .package-selection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .package-box {
+    cursor: pointer;
+    text-align: center;
+    padding: 15px;
+    border: 2px dashed white;
+  }
+  
+  .package-box.selected {
+    background-color: #e0e0e0;
+  }
+  
+  .package-title {
+    font-weight: bold;
+  }
+  
+  .package-price {
+    font-size: 20px;
+  }
+  
+  .package-time {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .package-info {
+    margin-top: 10px;
+  }
+  
+  .schedule-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .schedule-button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

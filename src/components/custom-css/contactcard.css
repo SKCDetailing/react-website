@@ -1,0 +1,132 @@
+.contact-card {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 20px;
+
+}
+
+.submit-box-name, .submit-box-email, .submit-box-message {
+    display: block;
+    color: whitesmoke;
+    background-color: #4A4A4A;
+    font-size: 1.2rem;
+    padding: 12px 12px;
+    border: 2px solid whitesmoke;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    max-width: 800px;
+    min-width: 300px;
+    
+}
+
+.submit-box-message {
+    height: 300px;
+}
+
+.submit-box-name:focus, .submit-box-email:focus, .submit-box-message:focus {
+    border-color:  #8CAFFF;
+    outline: none;
+}
+
+.submit-message-button {
+    color: whitesmoke;
+    background-color: #8CAFFF;
+    border: none;
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.details-container {
+    padding: 20px 20px;
+  }
+
+  .form-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-details h2 {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .problem-h2 {
+    margin-top: 40px;
+    margin-bottom: 5px;
+  }
+  
+  .contact-details p {
+    font-size: 18px;
+    font-style: bolder;
+    margin: 0;
+  }
+
+  .contact-details a {
+    color: whitesmoke;
+    font-style: italic;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .contact-details a:hover {
+    text-decoration: underline;
+  }
+  
+  .avaliable-container {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .avaliable-days {
+    text-align: center;
+    margin: 0px;
+  }
+  
+  .avaliable-days,
+  .avaliable-times {
+    padding: 0 20px;
+    margin-top: 10px;
+  }
+  
+  .avaliable-days p,
+  .avaliable-times p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    
+  }
+
+  .avaliable-times {
+    font-style: italic;
+  }
+
+  .success-notification {
+    color: green;
+    font-style: italic;
+  }
+
+  .fail-notification {
+    color: red;
+  }
+
+
+  @media screen and (max-width: 698px) {
+    .contact-card {
+        flex-direction: column;
+    }
+  }

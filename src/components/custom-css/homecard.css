@@ -1,0 +1,84 @@
+.card-container {
+    width: 100%;
+    height: 800px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+  }
+  
+  .card-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background for text readability */
+    padding: 120px;
+    border-radius: 40px;
+    max-width: 100%;
+  }
+  
+  .card-content h1 {
+    font-size: 3rem; /* Adjust font size as needed */
+  }
+  
+  .card-content p {
+    font-size: 1.5rem; /* Adjust font size as needed */
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  .booknow-button,
+  .our-work-button {
+    color: whitesmoke;
+    background-color: #8CAFFF;
+    border: none;
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 5px;
+    font-size: 1.2rem; /* Adjust font size as needed */
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 10px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .our-work-button {
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+  }
+  
+  .booknow-button:hover {
+    background-color: #6B94D4;
+  }
+  
+  .our-work-button:hover {
+    background-color: #4A4A4A;
+    color: #fff; /* Change text color on hover */
+  }
+  
+  @media screen and (max-width: 760px) {
+    .card-content {
+        padding: 60px;
+    }
+  }
+
+  @media screen and (max-width: 432px) {
+    .card-content {
+        padding: 20px;
+    }
+  }
+
+  @media screen and (max-width: 340px) {
+    .card-content {
+        padding: 10px;
+    }
+
+    .card-content h1 {
+        font-size: 2rem; /* Adjust font size as needed */
+      }
+      
+      .card-content p {
+        font-size: 1rem; /* Adjust font size as needed */
+      }
+  }

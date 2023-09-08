@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-color: #363636;
+  margin: 0;
+  padding: 0;
 }
 
 .App-logo {
@@ -35,4 +38,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.body {
+  margin: 0;
+}
+
+.navbar-container {
+  z-index: 2;
+}
+
+.carousel-container {
+  z-index: 1;
+}
+
+.section-title {
+  color: whitesmoke;
+  font-size: 3rem;
+  font-weight: bolder;
+
 }

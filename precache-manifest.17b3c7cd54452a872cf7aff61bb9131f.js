@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/skcdetailing-react-single-page/static/media/logo.ce41d0e1.png"
   },
   {
-    "revision": "3b22a0c1eb6119a30609659112011dad",
+    "revision": "4b9c82a839cddf1d28cc8562e2dba15d",
     "url": "/skcdetailing-react-single-page/index.html"
   }
 ];

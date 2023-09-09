@@ -25,7 +25,7 @@ function App() {
 
       </div>
 
-      <div id='our-work' className=''><span className='section-title'>Our Work</span>
+      <div id='our-work' className='our-work-container'><span className='section-title'>Our Work</span>
         <Carousel />
 
       </div>

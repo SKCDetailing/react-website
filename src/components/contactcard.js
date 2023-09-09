@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 
 
 const ContactCard = () => {
-    const OpenTime = "8:am to 6:00pm";
+    const OpenTime = "8:00am to 6:00pm";
 
     const [successNotification, setSuccessNotification] = useState('');
     const [failNotification, setFailNotification] = useState('');

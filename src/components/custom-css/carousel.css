@@ -1,6 +1,13 @@
 .carousel-container {
     background: #363636;
     width: 100%;
-    height: 750px;
+    height: 1100px;
+    
+    
     z-index: 1;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
 }

@@ -9,15 +9,47 @@ import './custom-css/carousel.css';
 function App() {
  const data = [
     {
-      image: "https://media.istockphoto.com/id/1415036627/photo/man-worker-of-car-detailing-studio-removing-scratches-on-car-varnish.webp?b=1&s=170667a&w=0&k=20&c=NrjjPK10RDALCLlkAUhKQWVS4SIzYMI23TuEB3bm3t8=",
+      image: "https://media.discordapp.net/attachments/1150180225905344614/1150180464930340985/IMG_2797.jpg",
       caption: ""
     },
     {
-      image: "https://cdn.create.vista.com/api/media/small/237651284/stock-photo-auto-detailing-car-interior-carwash-service-worker-gloves-cleans-salon",
+      image: "https://media.discordapp.net/attachments/1150180225905344614/1150180465173598278/IMG_2817.jpg",
       caption: ""
     },
     {
-        image: "https://media.istockphoto.com/id/826875544/photo/high-pressure-washing-car-outdoors.jpg?s=612x612&w=0&k=20&c=VWs9auj2wJpOEXSe4ZC5XVHFCOpOHIbkFHLnZY2-Q1M=",
+        image: "https://media.discordapp.net/attachments/1150180225905344614/1150180465433653350/IMG_2818.jpg",
+        caption: ""
+      },
+      {
+        image: "https://media.discordapp.net/attachments/1150180225905344614/1150180465668538511/IMG_2819.jpg",
+        caption: ""
+      },
+      {
+        image: "https://media.discordapp.net/attachments/1150180225905344614/1150180465903407226/IMG_2829.jpg",
+        caption: ""
+      },
+      {
+        image: "https://media.discordapp.net/attachments/1150180225905344614/1150180466176045117/IMG_2839.jpg",
+        caption: ""
+      },
+      {
+        image: "https://media.discordapp.net/attachments/1150180225905344614/1150180466436096131/IMG_2934.jpg",
+        caption: ""
+      },
+      {
+        image: "https://media.discordapp.net/attachments/1150180225905344614/1150180528570515558/IMG_2951.jpg",
+        caption: ""
+      },
+      {
+        image: "https://cdn.discordapp.com/attachments/1150180225905344614/1150180528838942760/IMG_2968.jpg",
+        caption: ""
+      },
+      {
+        image: "https://media.discordapp.net/attachments/1150180225905344614/1150180529111580682/IMG_2937.jpg",
+        caption: ""
+      },
+      {
+        image: "https://media.discordapp.net/attachments/1150180225905344614/1150180529442918450/IMG_2948.jpg",
         caption: ""
       },
     
@@ -43,7 +75,7 @@ function App() {
             data={data}
             time={4000}
             width="850px"
-            height="500px"
+  height="80vh"
             captionStyle={captionStyle}
             radius="10px"
             slideNumber={false}

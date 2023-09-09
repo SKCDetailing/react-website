@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6911cc9ff0d2e63118e3",
-    "url": "/skcdetailing-react-single-page/static/css/main.b732c19c.chunk.css"
+    "revision": "2205a8c9a5123baeadcd",
+    "url": "/skcdetailing-react-single-page/static/css/main.c3a90514.chunk.css"
   },
   {
-    "revision": "6911cc9ff0d2e63118e3",
-    "url": "/skcdetailing-react-single-page/static/js/main.6911cc9f.chunk.js"
+    "revision": "2205a8c9a5123baeadcd",
+    "url": "/skcdetailing-react-single-page/static/js/main.2205a8c9.chunk.js"
   },
   {
     "revision": "434376a2772065e17f47",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/skcdetailing-react-single-page/static/media/logo.ce41d0e1.png"
   },
   {
-    "revision": "1eb3f20f22cc16f04a1dbdfd40c95741",
+    "revision": "a489e1628a7d2cb56010972c5b55932a",
     "url": "/skcdetailing-react-single-page/index.html"
   }
 ];

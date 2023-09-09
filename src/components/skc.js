@@ -1,93 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import './custom-css/skc.css'; 
-import { Link, Element } from "react-scroll";
+import { Link } from "react-scroll";
 
 const SKC = () => {
   const [currentSelection, setCurrentSelection] = useState(0);
   const [selectedPackage, setSelectedPackage] = useState(0);
   const [selectedPackages, setSelectedPackages] = useState([]);
-
-  //START OF HEIGHT SCROLL
-  const containerRef = useRef(null);
-
-  // State variable to store the container height
-  const [containerHeight, setContainerHeight] = useState(0);
-
-  // Function to calculate and set the container height
-  const calculateContainerHeight = () => {
-    if (containerRef.current) {
-      const height = containerRef.current.getBoundingClientRect().height;
-      setContainerHeight(height);
-    }
-  };
-
-  // Call the calculateContainerHeight function whenever the component renders
-  useEffect(() => {
-    calculateContainerHeight();
-
-    // Add an event listener to update the container height on window resize
-    window.addEventListener('resize', calculateContainerHeight);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', calculateContainerHeight);
-    };
-  }, [currentSelection, selectedPackage, selectedPackages]); // Add any dependencies that might affect the container height
-
-
-  const [usersHeight, setUsersHeight] = useState(window.innerHeight);
-  const [adjustedHeight, setAdjustedHeight] = useState(containerHeight - usersHeight);
-
-  // Update adjustedHeight whenever either containerHeight or usersHeight changes
-useEffect(() => {
-  setAdjustedHeight(containerHeight - usersHeight);
-}, [containerHeight, usersHeight]);
-
-
-// console.log('container height', {containerHeight})
-// console.log('users height', {usersHeight})
-// console.log('adjusted height', {adjustedHeight})
-console.log(setUsersHeight);
-
-//END OF HEIGHT SCROLL
-
-//START OF BACK TO TOP SCROLL
-const [showScrollToTop, setShowScrollToTop] = useState(false); // State variable for showing the scroll-to-top button
-
-  // ... Rest of your code
-
-  // Add a scroll event listener to detect scrolling
-  useEffect(() => {
-    const handleScroll = () => {
-      const headingElement = document.querySelector('h2.selection-title');
-      if (headingElement) {
-        const headingRect = headingElement.getBoundingClientRect();
-        // Check if the heading is no longer in the viewport
-        if (headingRect.top < 0) {
-          setShowScrollToTop(true);
-        } else {
-          setShowScrollToTop(false);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []); // Add an empty dependency array to run this effect once
-
-  // Scroll back to the heading when the icon button is clicked
-  const scrollToHeading = () => {
-    const headingElement = document.querySelector('h2.selection-title');
-    if (headingElement) {
-      headingElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-//END OF BACK TO TOP SCROLL
 
   const vehicleTypes = [
     // Sedan
@@ -212,7 +130,7 @@ const [showScrollToTop, setShowScrollToTop] = useState(false); // State variable
           meetingLink: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23d4srCrhgYU_6z5RX_Hn0lLW8bTpOmk06U2mMKKOHehznRjQHOsITTwk-GLjTMDlrf_CCaILF?gv=true',
         },
 
-        
+      
       ],
     },
 
@@ -367,8 +285,8 @@ const calculateTotalPrice = (packageIndex) => {
     }
     return total;
   }, 0); 
-  //console.log('Total price is', totalAddOnPrice + basePrice);
-  //console.log('packageindex', packageIndex)
+  console.log('Total price is', totalAddOnPrice + basePrice);
+  console.log('packageindex', packageIndex)
   return basePrice + totalAddOnPrice;
 };
 
@@ -403,44 +321,37 @@ const handleAddOnChange = (packageIndex, addonId) => {
 //Begin return (page print)
 
   return (
-    
-    <div className="skc-container" ref={containerRef}>
+    <div className="skc-container">
       {/* Selection Group */}
       <div className="selection-group">
-        <Element name='schedule-button-element'><h2 className="selection-title">What kind of vehicle do you have?</h2></Element>
-        
+        <h2 className="selection-title">What kind of vehicle do you have?</h2>
 
         {/* Button Group */}
         <div className="button-group">
           {vehicleTypes.map((vehicleType, index) => (
-            <Link to='select-your-package' smooth={true} duration={500} offset={-20}
+            <div
               key={index}
               onClick={() => setCurrentSelection(index)}
               className={`vehicle-type ${currentSelection === index ? 'selected' : ''}`}>
-                
               
               {/* Icon */}
               <div className="vehicle-icon">
                 <i className={`${vehicleType.icon.package} fa-${vehicleType.icon.name}`} />
               </div>
               <div className="vehicle-title">{vehicleType.title}</div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
 
       {/* Package Group - All Cards*/}
-      <Element name='select-your-package'>
-        <h2 className='selection-title'>Select your Package</h2>
-      </Element>
-      
+      <h2 className='selection-title'>Select your Package</h2>
       
       <div className="package-group">
         {vehicleTypes[currentSelection].packages.map((vehiclePackage, packageIndex) => (
 
           //Each Package Card
-          <Link to='schedule-button-element' smooth={true} duration={500} offset={adjustedHeight}
-          key={packageIndex} onClick={() => setSelectedPackage(packageIndex)}
+          <div key={packageIndex} onClick={() => setSelectedPackage(packageIndex)}
           className={`package-card ${selectedPackage === packageIndex ? 'selected' : ''}`}>
           
             <div className="package-price-container">
@@ -484,10 +395,9 @@ const handleAddOnChange = (packageIndex, addonId) => {
              </div>
                 </div>
         </div>  
-      </Link>
+      </div>
          ))} 
   </div> {/* Closing div for package-group */}
-
 
           {/* Larger Vehicle - conditional Card */}   
           {currentSelection === 2 && ( 
@@ -530,22 +440,14 @@ const handleAddOnChange = (packageIndex, addonId) => {
               </div>  
             )}
 
+
+
            {/* Select Button */}
-
            {(currentSelection === 0 || currentSelection === 1) && ( 
-            <div className='book-appointment-container'>
-              <Element name='schedule-button-element-dud'>
-              <button className='book-appointment-button' onClick={() => window.open(vehicleTypes[currentSelection].packages[selectedPackage].meetingLink, '_blank')}>Schedule Appointment</button>  
-              </Element>
-            </div>
+          <div className='book-appointment-container'>
+            <button className='book-appointment-button' onClick={() => window.open(vehicleTypes[currentSelection].packages[selectedPackage].meetingLink, '_blank')}>Schedule Appointment</button>  
+          </div>
            )}
-
-      {/* Icon button to scroll back to the heading */}
-      {showScrollToTop && (
-        <button className="scroll-to-top-button" onClick={scrollToHeading}>
-          <i className="fas fa-arrow-up" />
-        </button>
-      )}
           
         </div> /* Closing Div for skc-container */
   );

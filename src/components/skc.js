@@ -36,8 +36,8 @@ const SKC = () => {
             },
             {
               id: 'pet-hair-removal',
-              title: 'Pet Hair Removal',
-              price: 45,
+              title: 'Engine Bay Cleaning',
+              price: 50,
             },
             // ... other add-ons
           ],
@@ -66,8 +66,8 @@ const SKC = () => {
             },
             {
               id: 'pet-hair-removal',
-              title: 'Pet Hair Removal',
-              price: 45,
+              title: 'Engine Bay Cleaning',
+              price: 50,
             },
             // ... other add-ons
           ],
@@ -96,8 +96,8 @@ const SKC = () => {
             },
             {
               id: 'pet-hair-removal',
-              title: 'Pet Hair Removal',
-              price: 45,
+              title: 'Engine Bay Cleaning',
+              price: 50,
             },
             // ... other add-ons
           ],
@@ -122,8 +122,8 @@ const SKC = () => {
             },
             {
               id: 'pet-hair-removal',
-              title: 'Pet Hair Removal',
-              price: 45,
+              title: 'Engine Bay Cleaning',
+              price: 50,
             },
             // ... other add-ons
           ],
@@ -162,8 +162,8 @@ const SKC = () => {
             },
             {
               id: 'pet-hair-removal',
-              title: 'Pet Hair Removal',
-              price: 45,
+              title: 'Engine Bay Cleaning',
+              price: 50,
             },
             // ... other add-ons
           ],
@@ -192,8 +192,8 @@ const SKC = () => {
             },
             {
               id: 'pet-hair-removal',
-              title: 'Pet Hair Removal',
-              price: 45,
+              title: 'Engine Bay Cleaning',
+              price: 50,
             },
             // ... other add-ons
           ],
@@ -222,8 +222,8 @@ const SKC = () => {
             },
             {
               id: 'pet-hair-removal',
-              title: 'Pet Hair Removal',
-              price: 45,
+              title: 'Engine Bay Cleaning',
+              price: 50,
             },
             // ... other add-ons
           ],
@@ -248,8 +248,8 @@ const SKC = () => {
             },
             {
               id: 'pet-hair-removal',
-              title: 'Pet Hair Removal',
-              price: 45,
+              title: 'Engine Bay Cleaning',
+              price: 50,
             },
             // ... other add-ons
           ],

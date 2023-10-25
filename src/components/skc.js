@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './custom-css/skc.css'; 
 import { Link } from "react-scroll";
+import MeetingLinks from './meetinglink';
 
 const SKC = () => {
   const [currentSelection, setCurrentSelection] = useState(0);
@@ -35,7 +36,7 @@ const SKC = () => {
               price: 70,
             },
             {
-              id: 'pet-hair-removal',
+              id: 'engine-bay-cleaning',
               title: 'Engine Bay Cleaning',
               price: 50,
             },
@@ -65,7 +66,7 @@ const SKC = () => {
               price: 70,
             },
             {
-              id: 'pet-hair-removal',
+              id: 'engine-bay-cleaning',
               title: 'Engine Bay Cleaning',
               price: 50,
             },
@@ -95,7 +96,7 @@ const SKC = () => {
               price: 70,
             },
             {
-              id: 'pet-hair-removal',
+              id: 'engine-bay-cleaning',
               title: 'Engine Bay Cleaning',
               price: 50,
             },
@@ -121,7 +122,7 @@ const SKC = () => {
               price: 70,
             },
             {
-              id: 'pet-hair-removal',
+              id: 'engine-bay-cleaning',
               title: 'Engine Bay Cleaning',
               price: 50,
             },
@@ -161,7 +162,7 @@ const SKC = () => {
               price: 70,
             },
             {
-              id: 'pet-hair-removal',
+              id: 'engine-bay-cleaning',
               title: 'Engine Bay Cleaning',
               price: 50,
             },
@@ -191,7 +192,7 @@ const SKC = () => {
               price: 70,
             },
             {
-              id: 'pet-hair-removal',
+              id: 'engine-bay-cleaning',
               title: 'Engine Bay Cleaning',
               price: 50,
             },
@@ -221,7 +222,7 @@ const SKC = () => {
               price: 70,
             },
             {
-              id: 'pet-hair-removal',
+              id: 'engine-bay-cleaning',
               title: 'Engine Bay Cleaning',
               price: 50,
             },
@@ -247,7 +248,7 @@ const SKC = () => {
               price: 70,
             },
             {
-              id: 'pet-hair-removal',
+              id: 'engine-bay-cleaning',
               title: 'Engine Bay Cleaning',
               price: 50,
             },
@@ -285,8 +286,7 @@ const calculateTotalPrice = (packageIndex) => {
     }
     return total;
   }, 0); 
-  console.log('Total price is', totalAddOnPrice + basePrice);
-  console.log('packageindex', packageIndex)
+  
   return basePrice + totalAddOnPrice;
 };
 
@@ -445,7 +445,11 @@ const handleAddOnChange = (packageIndex, addonId) => {
            {/* Select Button */}
            {(currentSelection === 0 || currentSelection === 1) && ( 
           <div className='book-appointment-container'>
-            <button className='book-appointment-button' onClick={() => window.open(vehicleTypes[currentSelection].packages[selectedPackage].meetingLink, '_blank')}>Schedule Appointment</button>  
+            <MeetingLinks
+  vehicleType={vehicleTypes[currentSelection].title}
+  selectedPackage={vehicleTypes[currentSelection].packages[selectedPackage]}
+  selectedAddOns={selectedPackages[selectedPackage] || []}
+/>
           </div>
            )}
           
